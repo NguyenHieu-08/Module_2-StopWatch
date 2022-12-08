@@ -29,10 +29,11 @@ public class StopWatch {
     }
 
     public long getElapsedTime() {
-        long hour = (this.stop().getHour() - this.startTime.getHour())*3600;
-        long min = (this.stop().getMinute() - this.startTime.getMinute())*60;
-        long second = this.stop().getSecond() - this.startTime.getSecond();
+        long hour = (this.endTime.getHour() - this.startTime.getHour())*3600;
+        long min = (this.endTime.getMinute() - this.startTime.getMinute())*60;
+        long second = (this.endTime.getSecond() - this.startTime.getSecond());
 
         return hour + min + second;
     }
+
 }
